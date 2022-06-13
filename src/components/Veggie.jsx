@@ -1,37 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { VeggieContext } from "../context/veggieContext";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
 
 function Veggie() {
-  const [veggie, setVeggie] = useState([]);
+  const [veggie] = useContext(VeggieContext);
 
-  useEffect(() => {
-    getVeggie();
-  }, []);
-
-  const getVeggie = async () => {
-    const check =
-      localStorage.getItem(
-        "veggie"
-      ); /* check if veggie was saved in local storage */
-
-    if (check) {
-      /* if there is take it, transform it in a object and put in popular*/
-      setVeggie(JSON.parse(check));
-    } else {
-      //if false take the fetch
-      //fetch calls with API key and 9 recipes as response
-      const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
-      );
-      const data = await api.json();
-      localStorage.setItem("veggie", JSON.stringify(data.recipes)); //add popular in local Storage
-      setVeggie(data.recipes);
-      /* console.log(data.recipes); */
-    }
-  };
   return (
     <div>
       <Wrapper>

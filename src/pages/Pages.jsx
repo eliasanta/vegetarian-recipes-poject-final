@@ -3,6 +3,7 @@ import React from "react";
 import Cuisine from "./Cuisine";
 import Searched from "./Searched";
 import Recipe from "./Recipe";
+import { NotFound } from "../components/NotFound";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -17,6 +18,7 @@ function Pages() {
           {/* dynamic with:type*/}
           <Route path="/searched/:search" element={<Searched />} />
           <Route path="/recipe/:name" element={<Recipe />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </div>
