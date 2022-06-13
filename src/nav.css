@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.form {
+  width: 100%;
+  margin-left: 2rem;
+}
+::placeholder {
+  color: white;
+}
+.form > input {
+  border: none;
+  width: 40rem;
+  height: 3rem;
+  background: linear-gradient(35deg, #639259, #049307);
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  outline: none;
+}
+.title-font {
+  text-decoration: none;
+  font-size: 2.6rem;
+  font-family: "Indie Flower", cursive;
+
+  font-weight: bold;
+  color: rgb(58, 57, 57);
+}
+
+.nav-logo-search {
+  /* search bar */
+  margin-top: 3rem;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 992px) {
+  .form {
+    margin-left: 0rem;
+  }
+  .form > input {
+    width: 15rem;
+    height: 2.8rem;
+    font-size: 1.2rem;
+  }
+  .nav-title {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-logo-search {
+    display: flex;
+    flex-direction: column;
+  }
+}

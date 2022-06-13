@@ -1,0 +1,47 @@
+.detailWrapped {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+ul {
+  margin-top: 2rem;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-info {
+  max-width: 50rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.buttons > * {
+  cursor: pointer;
+}
+.info-section {
+  margin-top: 2rem;
+}
+.info-section > h3 {
+  color: black;
+  text-align: justify;
+}
+@media screen and (max-width: 992px) {
+  .image-info {
+    max-width: 20rem;
+    border-radius: 0.5rem;
+    margin: auto;
+  }
+}

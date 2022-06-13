@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.sLink {
+  /* styled Navlink */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(35deg, #639259, #049307);
+  cursor: pointer;
+  transform: scale(0.8);
+}
+.sLink > h4 {
+  color: white;
+  font-size: 0.8rem;
+}
+.sLink > svg {
+  color: white;
+  font-size: 1.5rem;
+}
+.sLink > svg:hover {
+  transform: scale(-1, 1);
+}
+.sLink:hover {
+  transform: scale(0.95);
+}
