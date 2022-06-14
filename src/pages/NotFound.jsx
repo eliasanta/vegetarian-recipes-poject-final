@@ -3,8 +3,8 @@ import { BsFillArrowUpSquareFill } from "react-icons/bs";
 
 export const NotFound = () => {
   return (
-    <div className="not-found">
-      <h3>
+    <div>
+      <h3 style={{ marginTop: "4rem" }}>
         Sorry...your link isn't correct, search something{" "}
         <BsFillArrowUpSquareFill /> or Click
         <Link to="/">

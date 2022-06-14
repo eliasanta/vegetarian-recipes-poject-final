@@ -46,6 +46,7 @@ function Searched() {
 const Card = styled.div`
   img {
     width: 100%;
+    max-width: 500px;
     border-radius: 2rem;
   }
   a {

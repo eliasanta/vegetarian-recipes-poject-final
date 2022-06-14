@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import "./card.css";
+@import "./nav.css";
+@import "./detail-info.css";
+@import "./sLink.css";
+@import "./title.css";
+@import "./grid.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0% 15%;
+}
+
+h4 {
+  font-size: 1rem;
+  color: rgb(58, 57, 57);
+}
+h3 {
+  /* instructions */
+  font-size: 1.2rem;
+  color: rgb(58, 57, 57);
+  line-height: 1.2rem;
+  margin: 2rem 0rem;
+}
+li {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+a {
+  /* link for  */
+  color: linear-gradient(35deg, #639259, #049307);
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    margin: 0% 10%;
+  }
+}

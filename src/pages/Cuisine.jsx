@@ -13,6 +13,7 @@ function Cuisine() {
   const getCuisine = async (type) => {
     try {
       setIsPending(true);
+
       const recepies = await axios.get(
         `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=15&cuisine=${type}`
       );

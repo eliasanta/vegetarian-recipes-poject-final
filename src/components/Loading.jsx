@@ -10,8 +10,8 @@ function Loading() {
     margin: 0 auto;
   `;
   return (
-    <div className="loading">
-      <MoonLoader color={color} css={override} size={90} />
+    <div style={{ marginTop: "6rem" }}>
+      <MoonLoader color={color} css={override} size={70} />
     </div>
   );
 }

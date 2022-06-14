@@ -1,0 +1,17 @@
+.title-cuisine {
+  text-align: center;
+  line-height: 2rem;
+  margin-top: 4.4rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.random-title {
+  font-size: 1.3rem;
+  margin-bottom: 0rem;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 992px) {
+  .title-cuisine {
+    margin-top: 2.5rem;
+  }
+}
