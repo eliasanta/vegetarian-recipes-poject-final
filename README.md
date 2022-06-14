@@ -1,11 +1,13 @@
 #Vegetaria Recipe Project
 
-## Descriptio
+## Description
 This project allows the user to search from hundreds of vegetarian recipes,
 using https://spoonacular.com/food-api .
 ## Home Page
 ![App Screenshot](/src/img/Home.png)
-In the Home Page you can choose between from some of the most popular cuisines in the world just with a click in the square icons , form our suggestions or if you have something in mind yet you can write down in the search bar
+## Home Page options
+![App Screenshot](/src/img/Home_arrows.png)
+In the Home Page you can choose between from some of the most popular cuisines in the world with a click in the square icons(2) , form our suggestions(3) or if you have something in mind yet you can write down in the search bar(1).
 
 # Getting Started with Create React App
 
