@@ -3,7 +3,7 @@ import React from "react";
 import Cuisine from "./Cuisine";
 import Searched from "./Searched";
 import Recipe from "./Recipe";
-import { NotFound } from "../components/NotFound";
+import { NotFound } from "./NotFound";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 

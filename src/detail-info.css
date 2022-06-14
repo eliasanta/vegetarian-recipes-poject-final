@@ -35,6 +35,7 @@ ul {
   margin-top: 2rem;
 }
 .info-section > h3 {
+  line-height: 1.6rem;
   color: black;
   text-align: justify;
 }

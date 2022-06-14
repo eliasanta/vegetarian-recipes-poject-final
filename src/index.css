@@ -54,10 +54,18 @@ a {
 
 .grid {
   margin: 3rem auto;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   grid-gap: 3rem;
+}
+.not-found {
+  margin-top: 3rem;
+}
+.u:hover {
+  transform: scale(2);
+}
+.loading {
+  margin-top: 6rem;
 }
 
 @media screen and (max-width: 992px) {

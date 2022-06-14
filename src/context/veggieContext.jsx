@@ -26,12 +26,24 @@ export const VeggieProvider = (props) => {
         //if false take the fetch
         //fetch calls with API key and 9 recipes as response
         const response = await axios.get(url.veggieRecipesUrl);
-
         localStorage.setItem("veggie", JSON.stringify(response.data.recipes)); //add popular in local Storage
         setVeggieRecipes(response.data.recipes);
         /* console.log(data.recipes); */
-      } catch (e) {
-        console.log("sorry there is this problem", e.message);
+      } catch (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+          alert(error.message);
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request);
+        }
+        console.log(error.config);
       }
     }
   };
