@@ -52,6 +52,7 @@
     justify-content: center;
   }
   .nav-logo-search {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
   }

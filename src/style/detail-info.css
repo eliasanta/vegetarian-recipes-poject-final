@@ -45,4 +45,7 @@ ul {
     border-radius: 0.5rem;
     margin: auto;
   }
+  .detail {
+    margin-top: -2rem;
+  }
 }
