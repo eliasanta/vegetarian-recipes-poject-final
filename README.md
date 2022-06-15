@@ -7,9 +7,7 @@ using https://spoonacular.com/food-api .
 
 ## Link Applicazione
 
-## Link Applicazione
-
-[![Website](https://elia-library-project.netlify.app)]
+[![Website](https://img.shields.io/website?style=for-the-badge&up_message=CLICK%20ME%21&url=https%3A%2F%2Flijo-book-search-project.netlify.app%2F)](https://elia-library-project.netlify.app)
 
 ## Home Page
 
