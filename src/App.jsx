@@ -17,7 +17,7 @@ function App() {
           <ErrorBoundary>
             <Nav
               animate={{
-                scale: [1, 1.5, 1.5, 1.5, 1],
+                scale: [1, 1.3, 1.3, 1.3, 1],
                 rotate: [0, 15, 0, -15, 0],
               }}
               transition={{ duration: 1 }}
