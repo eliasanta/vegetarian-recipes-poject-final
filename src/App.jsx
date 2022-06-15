@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { motion } from "framer-motion";
-
 import { VeggieProvider } from "./context/veggieContext";
 import ErrorBoundary from "./components/ErrorBoundary";
 
@@ -17,9 +16,11 @@ function App() {
         <div className="nav-logo-search">
           <ErrorBoundary>
             <Nav
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ delay: 0.5, duration: 1 }}
+              animate={{
+                scale: [1, 1.5, 1.5, 1.5, 1],
+                rotate: [0, 15, 0, -15, 0],
+              }}
+              transition={{ duration: 1 }}
             >
               <div className="nav-title">
                 <GiForkKnifeSpoon style={{ color: "black" }} />
