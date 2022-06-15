@@ -18,7 +18,7 @@ function App() {
             <Nav
               animate={{
                 scale: [1, 1.3, 1.3, 1.3, 1],
-                rotate: [0, 15, 0, -15, 0],
+                rotate: [0, 10, 0, -10, 0],
               }}
               transition={{ duration: 1 }}
             >
