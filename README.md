@@ -1,4 +1,4 @@
-#Vegetaria Recipe Project
+## Vegetaria Recipe Project
 
 ## Description
 
@@ -26,16 +26,16 @@ Every time that a dish image is clicked it will open the recipe page with the in
 In the home page or in the Cuisine page you can choose from some of the most popular cuisine in the world and can see what you have choosed from the different color of the icon (5).
 On the page will be charghe some plate of the selected cuisine(6).
 
-# Recipe page
+## Recipe page
 
 ![App Screenshot](/src/img/Recipe.png)
 In this page there are the image of selected dish and the possibility to choose between the recipe and the ingredients by clicking the buttons(7)(8) as you can see in the nexts screen.
 
-# Recipe ingredients
+## Recipe ingredients
 
 ![App Screenshoot](/src/img/Recipe_ingredients.jpg)
 
-# Recipe Instructions
+## Recipe Instructions
 
 ![App Screenshoot](/src/img/Recipe_instrucions.jpg)
 
