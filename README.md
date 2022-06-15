@@ -7,7 +7,7 @@ using https://spoonacular.com/food-api .
 
 ## Link Applicazione
 
-[![Website](https://vegetarian-recipe.netlify.app/)
+![Website](https://vegetarian-recipe.netlify.app/)
 
 ## Home Page
 
@@ -26,15 +26,10 @@ Every time that a dish image is clicked it will open the recipe page with the in
 In the home page or in the Cuisine page you can choose from some of the most popular cuisine in the world and can see what you have choosed from the different color of the icon (5).
 On the page will be charghe some plate of the selected cuisine(6).
 
-## Searched Page
-
-![App Screenshot]
-In this page you can choose from some dishes.
-
 # Recipe page
 
 ![App Screenshot](/src/img/Recipe.png)
-In this page there are the image of selected dish and the possibility to choose between the recipe and the ingredients by clicking the buttons(7)(8) as uou can see in the nexts screen.
+In this page there are the image of selected dish and the possibility to choose between the recipe and the ingredients by clicking the buttons(7)(8) as you can see in the nexts screen.
 
 # Recipe ingredients
 
@@ -43,6 +38,11 @@ In this page there are the image of selected dish and the possibility to choose 
 # Recipe Instructions
 
 ![App Screenshoot](/src/img/Recipe_instrucions.jpg)
+
+## Searched Page
+
+![App Screenshot](/src/img/Searched.png)
+In this page you can see the results of your key word search(9).
 
 ## Built with
 
