@@ -8,27 +8,34 @@ import { GiForkKnifeSpoon } from "react-icons/gi";
 import { motion } from "framer-motion";
 
 import { VeggieProvider } from "./context/veggieContext";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <VeggieProvider>
       <Router>
         <div className="nav-logo-search">
-          <Nav
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            <div className="nav-title">
-              <GiForkKnifeSpoon style={{ color: "black" }} />
-              <Link className="title-font" to={"/"}>
-                Vegelicious
-              </Link>
-            </div>
-          </Nav>
-          <Search className="search" />
+          <ErrorBoundary>
+            <Nav
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              <div className="nav-title">
+                <GiForkKnifeSpoon style={{ color: "black" }} />
+                <Link className="title-font" to={"/"}>
+                  Vegelicious
+                </Link>
+              </div>
+            </Nav>
+          </ErrorBoundary>
+          <ErrorBoundary>
+            <Search className="search" />
+          </ErrorBoundary>
         </div>
-        <Pages />
+        <ErrorBoundary>
+          <Pages />
+        </ErrorBoundary>
       </Router>
     </VeggieProvider>
   );

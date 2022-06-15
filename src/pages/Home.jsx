@@ -2,6 +2,7 @@ import Category from "../components/Category";
 import Veggie from "../components/Veggie";
 import React from "react";
 import { motion } from "framer-motion";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 function Home() {
   return (
@@ -11,8 +12,12 @@ function Home() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.7 }}
     >
-      <Category />
-      <Veggie />
+      <ErrorBoundary>
+        <Category />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Veggie />
+      </ErrorBoundary>
     </motion.div>
   );
 }

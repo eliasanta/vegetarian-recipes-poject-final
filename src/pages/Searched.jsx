@@ -6,17 +6,25 @@ import axios from "axios";
 import Loading from "../components/Loading";
 
 function Searched() {
-  const [searchedRecepies, setSearchedRecepies] = useState([]);
+  const [searchedRecipes, setSearchedRecipes] = useState([]);
   const [isPending, setIsPending] = useState(false);
+  const [noRecipes, setNoRecipes] = useState(false);
   let { search } = useParams();
 
   const getSearched = async (searched) => {
     setIsPending(true);
-    const recepies = await axios.get(
+
+    const recipes = await axios.get(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${searched}`
     );
     setIsPending(false);
-    setSearchedRecepies(recepies.data.results);
+    let find = recipes.data.results.length; //handling if there aren't results
+    if (find === 0) {
+      setNoRecipes(true);
+    } else {
+      setNoRecipes(false);
+    }
+    setSearchedRecipes(recipes.data.results);
   };
   useEffect(() => {
     getSearched(search);
@@ -27,7 +35,7 @@ function Searched() {
         <Loading />
       ) : (
         <div className="grid">
-          {searchedRecepies.map((item) => {
+          {searchedRecipes.map((item) => {
             return (
               <Card key={item.id}>
                 <Link to={"/recipe/" + item.id}>
@@ -38,6 +46,9 @@ function Searched() {
             );
           })}
         </div>
+      )}
+      {noRecipes && (
+        <h3>Sorry but there aren't Recipes with this name, try another one.</h3>
       )}
     </div>
   );

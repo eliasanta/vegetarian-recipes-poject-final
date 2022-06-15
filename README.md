@@ -1,13 +1,57 @@
 #Vegetaria Recipe Project
 
 ## Description
+
 This project allows the user to search from hundreds of vegetarian recipes,
 using https://spoonacular.com/food-api .
+
+## Link Applicazione
+
+[![Website](https://vegetarian-recipe.netlify.app/)
+
 ## Home Page
+
 ![App Screenshot](/src/img/Home.png)
+
 ## Home Page options
+
 ![App Screenshot](/src/img/Home_arrows.png)
-In the Home Page you can choose between from some of the most popular cuisines in the world with a click in the square icons(2) , form our suggestions(3) or if you have something in mind yet you can write down in the search bar(1).
+In the Home Page you can choose between from some of the most popular cuisines in the world with a click in the square icons(2) , from our suggestions(3) using the arrows(4) or by sliding.
+If you have something in mind yet you can also write down in the search bar a dish or a keyword(1).
+Every time that a dish image is clicked it will open the recipe page with the instructions and the recipe's ingredients.
+
+## Searched Page
+
+![App Screenshot]
+In this page you can choose from some dishes.
+
+# Recipe page
+
+![App Screenshot]
+In this page there are the image of the selected dish, the possibility to choose between the recipe and the ingredients by clicking the buttons.
+
+## Built with
+
+- [Axios](https://github.com/axios/axios)
+- [React](https://it.reactjs.org/)
+
+## API Reference
+
+| Documentation   | Link                                                              |
+| :-------------- | :---------------------------------------------------------------- |
+| Spoonacular API | [Developer Center - APIs ](https://spoonacular.com/food-api/docs) |
+
+## Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elia-santagiuliana-b10323143/)
+
+# Acknowledgements
+
+- [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- [Awesome README](https://github.com/matiassingers/awesome-readme)
+- [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+- [Open Library](https://openlibrary.org/)
+- [Webpack Tutorial: how to set up webpack 5 from scratch](https://www.taniarascia.com/how-to-use-webpack)
 
 # Getting Started with Create React App
 
