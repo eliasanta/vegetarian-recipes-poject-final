@@ -46,8 +46,10 @@ In this page you can see the results of your key word search(9).
 
 ## Built with
 
-- [Axios](https://github.com/axios/axios)
 - [React](https://it.reactjs.org/)
+- [Axios](https://github.com/axios/axios)
+- [Context API] (https://reactjs.org/docs/context.html)
+- [React Router] (https://www.w3schools.com/react/react_router.asp)
 
 ## API Reference
 
