@@ -46,7 +46,6 @@ function Cuisine() {
         <Loading />
       ) : (
         <div>
-          {" "}
           <Category />
           <h3 className="random-title">Here a list:</h3>
           <motion.div
