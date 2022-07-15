@@ -11,37 +11,37 @@ using https://spoonacular.com/food-api .
 
 ## Home Page
 
-![App Screenshot](/src/img/Home.png)
+![App Screenshot](./public/img/Home.png)
 
 ## Home Page options
 
-![App Screenshot](/src/img/Home_arrows.png)
+![App Screenshot](./public/img/Home_arrows.png)
 In the Home Page you can choose between from some of the most popular cuisines in the world with a click in the square icons(2) , from our suggestions(3) using the arrows(4) or by sliding.
 If you have something in mind yet you can also write down in the search bar a dish or a keyword(1) and will appera a list of plates.
 Every time that a dish image is clicked it will open the recipe page with the instructions and the recipe's ingredients.
 
 ## Cuisine Page
 
-![App Screenshot](/src/img/Cuisine_select.png)
+![App Screenshot](./public/img/Cuisine_select.png)
 In the home page or in the Cuisine page you can choose from some of the most popular cuisine in the world and can see what you have choosed from the different color of the icon (5).
 On the page will be charghe some plate of the selected cuisine(6).
 
 ## Recipe page
 
-![App Screenshot](/src/img/Recipe.png)
+![App Screenshot](./public/img/Recipe.png)
 In this page there are the image of selected dish and the possibility to choose between the recipe and the ingredients by clicking the buttons(7)(8) as you can see in the nexts screen.
 
 ## Recipe ingredients
 
-![App Screenshoot](/src/img/Recipe_ingredients.jpg)
+![App Screenshoot](./public/img/Recipe_ingredients.jpg)
 
 ## Recipe Instructions
 
-![App Screenshoot](/src/img/Recipe_instrucions.jpg)
+![App Screenshoot](./public/img/Recipe_instrucions.jpg)
 
 ## Searched Page
 
-![App Screenshot](/src/img/Searched.png)
+![App Screenshot](./public/img/Searched.png)
 In this page you can see the results of your key word search(9).
 
 ## Built with
@@ -59,7 +59,7 @@ In this page you can see the results of your key word search(9).
 
 ## Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elia-santagiuliana-b10323143/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elia-santagiuliana/)
 
 # Acknowledgements
 

@@ -2,11 +2,12 @@
   margin: 3rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  grid-gap: 3rem;
+  grid-gap: 4rem;
 }
+
 @media screen and (max-width: 992px) {
   .grid {
-    margin-left: -8px;
+    margin-left: 5px;
     grid-gap: 2.2rem;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }

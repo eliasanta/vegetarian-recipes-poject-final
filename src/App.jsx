@@ -1,4 +1,4 @@
-import "./style/App.css";
+import "./App.scss";
 import Pages from "./pages/Pages";
 import Search from "./components/Search";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -34,9 +34,8 @@ function App() {
             <Search className="search" />
           </ErrorBoundary>
         </div>
-        <ErrorBoundary>
-          <Pages />
-        </ErrorBoundary>
+
+        <Pages />
       </Router>
     </VeggieProvider>
   );

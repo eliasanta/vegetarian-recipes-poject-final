@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-@import "./card.css";
-@import "./nav.css";
-@import "./detail-info.css";
-@import "./sLink.css";
-@import "./title.css";
-@import "./grid.css";
-
+@import "./card.scss";
+@import "./nav.scss";
+@import "./detail-info.scss";
+@import "./sLink.scss";
+@import "./title.scss";
+@import "./grid.scss";
+@import "./searched.scss";
+@import "./home.scss";
 * {
   margin: 0;
   padding: 0;

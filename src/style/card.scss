@@ -1,0 +1,30 @@
+.card--style {
+  max-width: 350px;
+  margin: 0 auto;
+}
+.card img {
+  width: 100%;
+  height: 90%;
+  border-radius: 50%;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 3px 3px 4px 3px rgba(#639259, 0.5),
+    3px 3px 4px 3px rgba(#639259, 0.4);
+  /*  transform: rotateX(60deg) rotatez(45deg);
+  filter: drop-shadow(-50px -50px 10px #639259); */
+}
+.card > a {
+  text-decoration: none;
+}
+/* card gradient home page */
+
+.card img:hover {
+  box-shadow: 7px 7px 8px 3px rgba(#639259, 0.5),
+    7px 7px 8px 3px rgba(#639259, 0.4);
+  transition: 0.4s;
+}
+@media screen and (max-width: 992px) {
+  .card {
+    width: 90%;
+  }
+}

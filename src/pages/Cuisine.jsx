@@ -1,53 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import Category from "../components/Category";
-import axios from "axios";
 import Loading from "../components/Loading";
+import useClientApi from "../api/useClientApi";
 
 function Cuisine() {
-  const [cuisine, setCuisine] = useState([]);
-  const [isPending, setIsPending] = useState(false);
   let { type } = useParams();
-
-  const getCuisine = async (type) => {
-    try {
-      setIsPending(true);
-
-      const recepies = await axios.get(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=15&cuisine=${type}`
-      );
-      setIsPending(false);
-      setCuisine(recepies.data.results);
-    } catch (error) {
-      if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
-        console.log(error.response.data);
-        console.log(error.response.status);
-        console.log(error.response.headers);
-        alert(error.message);
-      } else if (error.request) {
-        // The request was made but no response was received
-        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-        // http.ClientRequest in node.js
-        console.log(error.request);
-      }
-      console.log(error.config);
-    }
-  };
-  useEffect(() => {
-    getCuisine(type);
-  }, [type]);
+  const { data, loading } = useClientApi(
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&number=15&cuisine=${type}`
+  );
 
   return (
     <div>
-      {isPending ? (
+      {loading ? (
         <Loading />
       ) : (
         <div>
           <Category />
-          <h3 className="random-title">Here a list:</h3>
+          <h2 className="random-title">Here a list :</h2>
           <motion.div
             className="grid"
             animate={{ opacity: 1 }}
@@ -55,9 +26,9 @@ function Cuisine() {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            {cuisine.map((item) => {
+            {data?.results.map((item) => {
               return (
-                <div className="card" key={item.id}>
+                <div className="card card--style" key={item.id}>
                   <Link className="link" to={"/recipe/" + item.id}>
                     <img src={item.image} alt={item.title}></img>
                     <h4>{item.title}</h4>

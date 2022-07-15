@@ -1,50 +1,67 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import styled from "styled-components";
-import React from "react";
-import axios from "axios";
 import Loading from "../components/Loading";
+import useClientApi from "api/useClientApi";
 
 function Searched() {
-  const [searchedRecipes, setSearchedRecipes] = useState([]);
-  const [isPending, setIsPending] = useState(false);
   const [noRecipes, setNoRecipes] = useState(false);
   let { search } = useParams();
 
-  const getSearched = async (searched) => {
-    setIsPending(true);
+  const { data, loading } = useClientApi(
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${search}`
+  );
 
-    const recipes = await axios.get(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${searched}`
-    );
-    setIsPending(false);
-    let find = recipes.data.results.length; //handling if there aren't results
-    if (find === 0) {
-      setNoRecipes(true);
+  /*  useEffect(() => {
+    if (data != "null") {
+      if (data.results.length === 0) {
+        setNoRecipes(true);
+        console.log("non sono null e non ci sono risultati");
+      } else {
+        setNoRecipes(false);
+      }
+      console.log("non sono null e ci sono risultati");
     } else {
-      setNoRecipes(false);
+      console.log("sono null e quindi non faccio nulla");
     }
-    setSearchedRecipes(recipes.data.results);
-  };
-  useEffect(() => {
-    getSearched(search);
-  }, [search]);
+  }, [data]); */
+
   return (
     <div>
-      {isPending ? (
+      {loading ? (
         <Loading />
       ) : (
-        <div className="grid">
-          {searchedRecipes.map((item) => {
-            return (
-              <Card key={item.id}>
-                <Link to={"/recipe/" + item.id}>
-                  <img src={item.image} alt={item.title}></img>
-                  <h4>{item.title}</h4>
-                </Link>
-              </Card>
-            );
-          })}
+        <div>
+          <h2
+            style={{
+              textAlign: "center",
+              marginBottom: "-15px",
+              marginTop: "50px",
+            }}
+          >
+            Searched results :
+          </h2>
+          <div className="grid">
+            {data?.results.map((item) => {
+              return (
+                <Card
+                  className="card--style"
+                  /* style={{ maxWidth: "300px", margin: "0 auto" }} */
+                  key={item.id}
+                >
+                  <Link to={"/recipe/" + item.id}>
+                    <img
+                      className="searched--img"
+                      src={item.image}
+                      alt={item.title}
+                    ></img>
+                    <h4 style={{ textAlign: "center" }}>{item.title}</h4>
+                  </Link>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       )}
       {noRecipes && (
@@ -55,10 +72,6 @@ function Searched() {
 }
 
 const Card = styled.div`
-  img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 2rem;
   }
   a {
     text-decoration: none;

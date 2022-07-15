@@ -1,6 +1,6 @@
 /* VEGGIE CONTEXT WITH LOCAL STORAGE */
 import React, { useState, useEffect, createContext } from "react";
-import url from "../components/Api";
+import url from "../api/Api";
 import axios from "axios";
 
 export const VeggieContext = createContext();
