@@ -13,7 +13,7 @@ function Searched() {
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${search}`
   );
 
-  /*  useEffect(() => {
+  /* useEffect(() => {
     if (data != "null") {
       if (data.results.length === 0) {
         setNoRecipes(true);
