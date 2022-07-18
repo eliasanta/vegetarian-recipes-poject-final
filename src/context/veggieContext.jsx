@@ -2,7 +2,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import url from "../api/Api";
 import axios from "axios";
-
 export const VeggieContext = createContext();
 
 export const VeggieProvider = (props) => {

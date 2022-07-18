@@ -10,6 +10,7 @@ function Search() {
     e.preventDefault();
     //put input in the Url
     navigate("/searched/" + input);
+    setInput("");
   };
   return (
     <form onSubmit={submitHandler}>

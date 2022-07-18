@@ -1,31 +1,16 @@
 import React from "react";
-import { useState, useEffect } from "react";
+
 import { useParams, Link } from "react-router-dom";
 import styled from "styled-components";
 import Loading from "../components/Loading";
 import useClientApi from "api/useClientApi";
 
 function Searched() {
-  const [noRecipes, setNoRecipes] = useState(false);
   let { search } = useParams();
 
   const { data, loading } = useClientApi(
     `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${search}`
   );
-
-  /* useEffect(() => {
-    if (data != "null") {
-      if (data.results.length === 0) {
-        setNoRecipes(true);
-        console.log("non sono null e non ci sono risultati");
-      } else {
-        setNoRecipes(false);
-      }
-      console.log("non sono null e ci sono risultati");
-    } else {
-      console.log("sono null e quindi non faccio nulla");
-    }
-  }, [data]); */
 
   return (
     <div>
@@ -63,9 +48,6 @@ function Searched() {
             })}
           </div>
         </div>
-      )}
-      {noRecipes && (
-        <h3>Sorry but there aren't Recipes with this name, try another one.</h3>
       )}
     </div>
   );

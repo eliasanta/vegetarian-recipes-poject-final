@@ -23,7 +23,7 @@ function Veggie() {
             gap: "2rem",
           }}
         >
-          {veggie.map((recipe) => {
+          {veggie?.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
@@ -45,7 +45,7 @@ const Wrapper = styled.div`
   margin: 4rem 0rem;
 `;
 const Card = styled.div`
-  min-height: 15rem;
+  min-height: 17rem;
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
@@ -67,7 +67,7 @@ const Card = styled.div`
     align-items: center;
   }
   img {
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     position: absolute;
     left: 0;
     width: 100%;
