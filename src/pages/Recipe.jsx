@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
-import Loading from "../components/Loading";
+/* import Loading from "../components/Loading"; */
+import LoadingLottie from "components/LoadingLottie";
 import useClientApi from "../api/useClientApi";
 
 function Recipe() {
@@ -16,7 +17,7 @@ function Recipe() {
   return (
     <div>
       {loading ? (
-        <Loading />
+        <LoadingLottie />
       ) : (
         <DetailWrapped className="detailWrapped">
           <div className="detail">

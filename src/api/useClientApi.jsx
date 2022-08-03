@@ -18,7 +18,10 @@ function useClientApi(url) {
         setError(err);
       })
       .finally(() => {
-        setLoading(false);
+        setTimeout(function () {
+          //set delay ,so I can see the animation
+          setLoading(false);
+        }, 600);
       });
   }, [url]);
 

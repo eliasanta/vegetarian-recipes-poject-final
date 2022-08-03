@@ -2,7 +2,8 @@ import React from "react";
 
 import { useParams, Link } from "react-router-dom";
 import styled from "styled-components";
-import Loading from "../components/Loading";
+/* import Loading from "../components/Loading"; */
+import LoadingLottie from "components/LoadingLottie";
 import useClientApi from "api/useClientApi";
 
 function Searched() {
@@ -15,7 +16,7 @@ function Searched() {
   return (
     <div>
       {loading ? (
-        <Loading />
+        <LoadingLottie />
       ) : (
         <div>
           <h2

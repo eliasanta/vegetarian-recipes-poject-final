@@ -2,7 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 import Category from "../components/Category";
-import Loading from "../components/Loading";
+/* import Loading from "../components/Loading"; */
+import LoadingLottie from "components/LoadingLottie";
 import useClientApi from "../api/useClientApi";
 
 function Cuisine() {
@@ -14,7 +15,7 @@ function Cuisine() {
   return (
     <div>
       {loading ? (
-        <Loading />
+        <LoadingLottie />
       ) : (
         <div>
           <Category />
